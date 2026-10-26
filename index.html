@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yumna AlQahtani | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Welcome banner (Assignment 2) -->
+  <div id="welcome-banner"></div>
+
+  <!-- ===== Navigation ===== -->
+  <header class="navbar">
+    <a href="#home" class="logo">Yumna<span>.</span></a>
+
+    <button id="menu-toggle" aria-label="Open menu">☰</button>
+
+    <nav id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#skills-wrapper">Skills</a>
+      <a href="#projects-wrapper">Projects</a>
+      <a href="#live">Live Data</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle">🌙 Dark</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== Home / About ===== -->
+    <section id="home" class="hero">
+      <div class="avatar">YA</div>
+      <div>
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Yumna AlQahtani</h1>
+        <p class="subtitle">MICT student at The American University in Cairo</p>
+        <p>
+          I'm studying Management of Information and Communication Technology (BBA)
+          at the Onsi Sawiris School of Business, graduating in Fall 2026.
+          I'm interested in business systems, ERP/CRM, process automation and
+          digital transformation, and I want to work in systems development and
+          consulting in the GCC and beyond.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects-wrapper" class="btn">View my work</a>
+          <a href="#contact" class="btn btn-outline">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills-wrapper">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <button class="toggle-btn" data-target="skills" data-label="Skills">Hide Skills</button>
+      </div>
+
+      <div id="skills">
+        <ul id="skills-list" class="chips">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>ERP &amp; CRM Systems</li>
+          <li>Business Process Analysis</li>
+          <li>Systems Architecture (ISO 42010)</li>
+          <li>Data Analytics</li>
+          <li>Computer Networks</li>
+        </ul>
+
+        <div class="skill-adder">
+          <label for="skill-input">Add a skill:</label>
+          <input type="text" id="skill-input" placeholder="e.g. Python">
+          <button id="add-skill-btn" class="btn">Add</button>
+        </div>
+        <p id="skill-message" class="form-message"></p>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects-wrapper">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <button class="toggle-btn" data-target="projects" data-label="Projects">Hide Projects</button>
+      </div>
+
+      <div id="projects" class="grid">
+
+        <article class="project card">
+          <h3>Fatemina E-commerce Website</h3>
+          <p>Online store for an Egyptian-Spanish handmade fashion brand.</p>
+          <button class="details-btn btn btn-small">View Details</button>
+          <div class="project-details hidden">
+            <p>Helped build the brand's website so customers can browse and buy
+            handmade pieces online.</p>
+          </div>
+        </article>
+
+        <article class="project card">
+          <h3>Masar Job Matching Platform</h3>
+          <p>Software engineering project (CSCE 3701).</p>
+          <button class="details-btn btn btn-small">View Details</button>
+          <div class="project-details hidden">
+            <p>A platform that matches job seekers with suitable openings,
+            designed and documented through software engineering milestones.</p>
+          </div>
+        </article>
+
+        <article class="project card">
+          <h3>Egypt Tourism Support System</h3>
+          <p>Information systems architecture project (MOIS 4970).</p>
+          <button class="details-btn btn btn-small">View Details</button>
+          <div class="project-details hidden">
+            <p>Group project documenting the system's architecture using
+            ISO 42010 viewpoints and views. I focused on keeping the
+            documentation consistent across sections.</p>
+          </div>
+        </article>
+
+        <article class="project card">
+          <h3>Carrefour Egypt Data Analytics</h3>
+          <p>AI in Business course project.</p>
+          <button class="details-btn btn btn-small">View Details</button>
+          <div class="project-details hidden">
+            <p>Analysed personal care department data using Apriori, K-Means,
+            linear and logistic regression, and KNN.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- GitHub repos (API) -->
+      <h3 class="sub-head">My GitHub Repositories</h3>
+      <div id="github-repos" class="grid">
+        <p class="status">Loading…</p>
+      </div>
+    </section>
+
+    <!-- ===== Live Data (APIs) ===== -->
+    <section id="live">
+      <h2>Live Data</h2>
+      <div class="grid two">
+
+        <!-- Weather API -->
+        <div class="card">
+          <h3>Weather</h3>
+          <form id="weather-form" class="inline-form">
+            <input type="text" id="city-input" value="Cairo" placeholder="Enter a city">
+            <button type="submit" class="btn">Search</button>
+          </form>
+          <div id="weather-result">
+            <p class="status">Loading…</p>
+          </div>
+        </div>
+
+        <!-- Quotes API -->
+        <div class="card">
+          <h3>Quote of the Moment</h3>
+          <div id="quote-box">
+            <p class="status">Loading…</p>
+          </div>
+          <button id="new-quote-btn" class="btn">New Quote</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form" class="card" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email">
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5"></textarea>
+
+        <button type="submit" class="btn">Send</button>
+        <p id="form-message" class="form-message"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Yumna AlQahtani · Built with HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="api.js"></script>
+</body>
+</html>
